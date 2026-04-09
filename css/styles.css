@@ -536,6 +536,7 @@ section {
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    cursor: pointer;
 }
 
 .gallery-item:hover {
@@ -899,6 +900,50 @@ section {
     line-height: 1.8;
     color: var(--text);
     margin-bottom: 20px;
+}
+
+/* ============================
+   LIGHTBOX
+   ============================ */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2.5rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    z-index: 10000;
+}
+
+.lightbox-close:hover {
+    opacity: 1;
 }
 
 /* ============================

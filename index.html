@@ -213,10 +213,10 @@
             <p class="section-desc">Yakinda fotograflar eklenecektir.</p>
         </div>
         <div class="gallery-grid" data-anim>
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="assets/images/galeri-vintage.jpg" alt="Ozbilen Kurs Binasi" loading="lazy">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="assets/images/galeri-sketch.jpg" alt="Ozbilen Kurs Binasi" loading="lazy">
             </div>
             <div class="gallery-placeholder">
@@ -321,6 +321,12 @@
         </div>
     </div>
 </footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Kapat">&times;</button>
+    <img src="" alt="" id="lightboxImg">
+</div>
 
 <script src="js/app.js"></script>
 </body>

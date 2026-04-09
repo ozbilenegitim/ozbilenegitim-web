@@ -101,3 +101,25 @@
     }
 
 })();
+
+// Lightbox (global scope for onclick)
+function openLightbox(el) {
+    var img = el.querySelector('img');
+    if (!img) return;
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lightboxImg');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    var lb = document.getElementById('lightbox');
+    lb.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+});
