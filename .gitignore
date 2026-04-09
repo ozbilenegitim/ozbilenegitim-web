@@ -1,0 +1,13 @@
+# Raw source images (keep only optimized versions in assets/)
+ozbilen-bina-clear.png
+ozbilen-bina-sketch.png
+ozbilen-bina-vintage.png
+ozbilen-logo-png.png
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
